@@ -28,8 +28,7 @@ var config = {
         'resolve': {
             'extensions': ['', '.js', '.jsx'],
             'alias': {
-                // 类似fekit的alias
-                'Logic': './src/scripts'
+                // 只能做模块别名
             }
         }
     }

@@ -6,4 +6,6 @@ let data = [{
     'text': '*哈哈*，是啊'
 }];
 
-module.exports = data;
+module.exports = {
+    data: data
+}

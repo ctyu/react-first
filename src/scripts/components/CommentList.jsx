@@ -1,15 +1,19 @@
 var React = require('react');
 
+import {Comment} from './Comment.jsx';
+
+
 let CommentList = React.createClass({
     render: function() {
-        let commentList = (this.props.data || []).map((val) => {
+        let list = this.props.list || [];
+        let comments = list.map((val,i) => {
             return (
-                <Comment author={val.author}>{val.text}</Comment>
+                <Comment key={i} author={val.author}>{val.text}</Comment>
             )
         });
         return (
             <div className = "commentList" >
-                {commentList}
+                {comments}
             </div>
         );
     }
@@ -18,9 +22,14 @@ let CommentList = React.createClass({
 var CommentForm = React.createClass({
     render: function() {
         return (
-            < div className = "commentForm" >
+            <div className = "commentForm" >
                 Hello, world!I am a CommentForm.
-            < /div>
+            </div>
         );
     }
 });
+
+module.exports = {
+    'CommentList': CommentList,
+    'CommentForm': CommentForm
+}
