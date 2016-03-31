@@ -2,7 +2,8 @@ var webpack = require('webpack');
 var path = require('path');
 var config = {
     'entry': {
-        index: './entry/index.js'
+        index: './entry/index.js',
+        redux_001_index: './entry/redux/001/index.js'
     },
 
     'output': {
